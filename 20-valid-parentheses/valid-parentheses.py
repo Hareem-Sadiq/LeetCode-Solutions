@@ -1,16 +1,27 @@
 class Solution(object):
     def isValid(self, s):
-        stack = []
-        for paren in s:
-            if paren == '(' or paren == '[' or paren == '{':
-                stack.append(paren)
+        char = []
+        for parenthesis in s:
+            if parenthesis in ['(' ,'[' ,'{']:
+                char.append(parenthesis)
             else:
-                if not stack:
+                if not char:
                     return False
                 else:
-                    top = stack[-1]
-                if paren == ')' and top == '(' or paren == ']' and top == '[' or paren == '}' and top == '{':
-                    stack.pop()
-                else:
-                    return False
-        return not stack
+                    top = char[-1]
+                if parenthesis == ')':
+                    if top == '(':
+                        char.pop()
+                    else:
+                        return False
+                elif parenthesis == ']':
+                    if top == '[': 
+                        char.pop()
+                    else:
+                        return False
+                elif parenthesis == '}':
+                    if top == '{':
+                        char.pop()
+                    else:
+                        return False
+        return not char
