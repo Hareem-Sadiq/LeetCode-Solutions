@@ -30,17 +30,17 @@ class Solution(object):
                 result = result + 'X'
                 num = num - 10
             elif num >= 9:
-                result += 'IX'
-                num -= 9
+                result = result + 'IX'
+                num = num - 9
             elif num >= 5:
-                result += 'V'
-                num -= 5
+                result = result + 'V'
+                num = num - 5
             elif num >= 4:
-                result += 'IV'
-                num -= 4
+                result = result +'IV'
+                num = num - 4
             else:
-                result += 'I'
-                num -= 1
+                result = result + 'I'
+                num = num - 1
         return result
     
 
