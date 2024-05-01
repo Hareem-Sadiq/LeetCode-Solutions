@@ -7,9 +7,9 @@ class Solution(object):
                 step=step+1
                 capacity=capacity-plants[plant]
             else:
-                backward_step=step+plant
+                step=step+plant
                 capacity=can
-                step=backward_step+plant+1
+                step=step+plant+1
                 capacity=capacity-plants[plant]
         return(step)
         
