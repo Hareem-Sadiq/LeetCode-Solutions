@@ -6,8 +6,6 @@ class Solution(object):
         :type p: str
         :rtype: bool
         """
-        if p==".*":
-            return True
         if '*'*3 in p and s not in p:
             return False
         elif '*'*3 in p and s in p:
