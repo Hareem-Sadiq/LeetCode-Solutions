@@ -13,5 +13,5 @@ class Solution(object):
         a=re.match(p,s)
         if a is None:
             return(False)
-        if a.group(0)==s:
+        elif a.group(0)==s:
             return(True)
