@@ -1,0 +1,19 @@
+import re
+class Solution(object):
+    def isMatch(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        if p==".*":
+            return True
+        if '*'*3 in p and s not in p:
+            return False
+        elif '*'*3 in p and s in p:
+            return True
+        a=re.match(p,s)
+        if a is not None:
+            if a.group(0)==s:
+                return(True)
+        return(False)
