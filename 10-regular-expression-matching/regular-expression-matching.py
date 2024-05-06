@@ -11,7 +11,7 @@ class Solution(object):
         elif '*'*3 in p and s in p:
             return True
         a=re.match(p,s)
-        if a is None:
-            return(False)
-        elif a.group(0)==s:
+        if a is not None and a.group(0)==s:
             return(True)
+        else:
+            return(False)
