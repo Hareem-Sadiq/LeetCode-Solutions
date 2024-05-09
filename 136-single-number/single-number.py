@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         for num in nums:
-            duplicate=nums.count(num)
-            if (duplicate==1):
+            if (nums.count(num)==1):
                 return (num)
             
