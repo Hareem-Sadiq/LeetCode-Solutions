@@ -10,7 +10,7 @@ class Solution(object):
         hex_chars = "0123456789abcdef"
         result = ""
         if num < 0:
-            num += 2**32  # Convert negative number to its two's complement
+            num += 2**32 
         
         while num > 0:
             remainder = num % 16
