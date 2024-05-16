@@ -11,8 +11,6 @@ class Solution(object):
             for char in word.lower():
                 if char in vowels:
                     v+=1
-                elif(ord(char)>=48 and ord(char)<=57):
-                    pass
                 elif (ord(char)>=97 and ord(char)<=122):
                     consonant+=1
         else:
