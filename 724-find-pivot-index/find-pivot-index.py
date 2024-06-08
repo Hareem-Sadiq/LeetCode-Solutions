@@ -5,11 +5,10 @@ class Solution(object):
         :rtype: int
         """
         sumLeft=0
-        sumRight=[0]*len(nums)
         total_sum=sum(nums)
         for i in range(len(nums)):
-            sumRight[i]=total_sum -nums[i]-sumLeft
-            if sumRight[i]==sumLeft:
+            sumRight=total_sum -nums[i]-sumLeft
+            if sumRight==sumLeft:
                 return i
             sumLeft+=nums[i]
         return -1
